@@ -1,37 +1,33 @@
 #include <iostream>
+#define MAX 9
 using namespace std;
 
-int ans[9];
-int visited[9];
-int N, M;
+int n,m;
+int arr[MAX] = {0,};
+bool visited[MAX] = {0,};
 
-void recursion(int x)
+void dfs(int cnt)
 {
-	if (x == M + 1)
-	{
-		for (int i = 1; i <= M; i++)
-		{
-			cout << ans[i] << " ";
-		}
-		cout << "\n"; 
-	}
-	else
-	{
-		for (int i = 1; i <= N; i++)
-		{
-			if (visited[i] == 0)
-			{
-				visited[i] = 1;
-				ans[x] = i;
-				recursion(x + 1);
-				visited[i] = 0;
-			}
-		}
-	}
+    if(cnt == m)
+    {
+        for(int i = 0; i < m; i++)
+            cout << arr[i] << ' ';
+        cout << '\n';
+        return;
+    }
+    for(int i = 1; i <= n; i++)
+    {
+        if(!visited[i])
+        {
+            visited[i] = true;
+            arr[cnt] = i;
+            dfs(cnt+1);
+            visited[i] = false;
+        }
+    }
 }
 
-int main()
-{
-	cin >> N >> M;
-	recursion(1);
+int main() {
+    cin >> n >> m;
+    dfs(0);
 }
