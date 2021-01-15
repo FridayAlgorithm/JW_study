@@ -1,6 +1,6 @@
 n = int(input()) 
 video = [list(input()) for _ in range(n)] 
-def divide(x, y, n): 
+def div(x, y, n): 
   ans = [] 
   check = True 
   color = video[x][y] 
@@ -12,12 +12,12 @@ def divide(x, y, n):
       if color != video[i][j]: 
         check = False 
         ans.append("(") 
-        ans.extend(divide(x, y, n//2)) 
-        ans.extend(divide(x, y+n//2, n//2)) 
-        ans.extend(divide(x+n//2, y, n//2)) 
-        ans.extend(divide(x+n//2, y+n//2, n//2))
+        ans.extend(div(x, y, n//2)) 
+        ans.extend(div(x, y+n//2, n//2)) 
+        ans.extend(div(x+n//2, y, n//2)) 
+        ans.extend(div(x+n//2, y+n//2, n//2))
         ans.append(")") 
         return ans 
    return color 
      
-print("".join(divide(0, 0, n)))
+print("".join(div(0, 0, n)))
