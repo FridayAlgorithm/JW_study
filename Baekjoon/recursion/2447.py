@@ -1,21 +1,18 @@
-def get_stars(n):
-    matrix = []
-    for i in range(3 * len(n)):
-        if i // len(n) == 1:
-            matrix.append(n[i % len(n)] + " " * len(n) + n[i % len(n)])
-        else:
-            matrix.append(n[i % len(n)] * 3)
-    return matrix
- 
- 
-star = ["***", "* *", "***"]
+import sys
+
+def draw(x,y):
+    while x != 0:
+        if (x%3) == 1 and (y%3) == 1:
+            sys.stdout.write(' ')
+            return
+        x = x // 3
+        y = y // 3
+
+    sys.stdout.write('*')
+
+
 n = int(input())
-e = 0
-while n != 3:
-    n = int(n / 3)
-   e += 1
- 
-for i in range(e):
-    star = get_stars(star)
-for i in star:
-    print(i)
+for i in range(n):
+    for j in range(n):
+        draw(j,i)
+    sys.stdout.write('\n')
