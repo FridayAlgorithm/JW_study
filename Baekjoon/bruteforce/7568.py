@@ -4,8 +4,8 @@ people = []
 score = [1 for _ in range(N)]
 
 for _ in range(N):
-    x_y = list(map(int, input().split()))
-    people.append(x_y)
+    heightweigh = list(map(int, input().split()))
+    people.append(heightweigh)
 
 for i in people:
     cnt = 1
