@@ -1,10 +1,10 @@
-def hanoi(n, from_pos, to_pos, aux_pos): 
+def hanoi(n, a, b, c): 
     if n == 1:
-        print(from_pos, to_pos)
+        print(a, b)
         return 
-    hanoi(n - 1, from_pos, aux_pos, to_pos)
-    print(from_pos, to_pos)
-    hanoi(n - 1, aux_pos, to_pos, from_pos)
+    hanoi(n - 1, a, c, b)
+    print(a, b)
+    hanoi(n - 1, c, b, a)
 n = int(input())
 result = 1
 for i in range(1, n+1):
