@@ -1,8 +1,12 @@
-T = int(input())
-for _ in range(T):
-    N = int(input())
-    dp = [1, 1, 1, 2, 2]
-    if N > 5:
-        for j in range(5, N):
-            dp.append(dp[j-1] + dp[j-5])
-    print(dp[N-1])
+p = [0 for i in range(101)]
+#100아님주의
+p[1] = 1
+p[2] = 1
+p[3] = 1
+for i in range(0, 98):
+    #97아님주의
+    p[i + 3] = p[i] + p[i + 1]
+n = int(input())
+for i in range(n):
+    n = int(input())
+    print(p[n])
