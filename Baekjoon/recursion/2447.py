@@ -2,7 +2,7 @@ import sys
 
 def draw(x,y):
     while x != 0:
-         # 몫이 1인 경우
+         # 몫이 1인 경우 or 나머지가 1인 경우
         if (x%3) == 1 and (y%3) == 1:
             sys.stdout.write(' ')
             return
