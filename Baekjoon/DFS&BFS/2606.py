@@ -7,10 +7,10 @@ for i in range(t):
     s[a - 1][b - 1] = 1
     s[b - 1][a - 1] = 1
 def dfs(v):
-    print(v, end = ' ')
+    #print(v, end = ' ')
     visited[v] = True
-    for e in arr[v]:
-        if visited[e] == False:
+    for e in range(n):
+        if s[v][e] == 1 and if visited[e] == False:
             dfs(e)
 dfs(0)
 cnt = 0
