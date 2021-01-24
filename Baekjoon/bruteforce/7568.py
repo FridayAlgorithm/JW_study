@@ -1,7 +1,6 @@
 N = int(input())
 
 people = []
-score = [1 for _ in range(N)]
 
 for _ in range(N):
     heightweigh = list(map(int, input().split()))
