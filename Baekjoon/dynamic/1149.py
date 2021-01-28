@@ -4,7 +4,7 @@ input = sys.stdin.readline
 n=int(input())
 color=[]
 for i in range(n):
-  color.append(list(map(int, input().strip().split())))
+  color.append(list(map(int, sys.stdin.readline().split() ) ) )
  
 for i in range(1,n):
   color[i][0]= color[i][0]+min(color[i-1][1],color[i-1][2])
