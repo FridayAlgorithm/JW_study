@@ -20,3 +20,4 @@ for _ in range(int(input())):
         heapq.heappush(max_heap, (-min_value, min_value))
 
     print(max_heap[0][1])
+   //공부필요
