@@ -2,7 +2,7 @@ n=int(input())
 result=[0 for _ in range(n+1)]
  
  
-def make_one(n):
+def dp(n):
     if n==1:
         return
     result[2]=1
@@ -18,5 +18,5 @@ def make_one(n):
         if i%2==0:
             result[i]=min(result[i//2]+1,result[i])
  
-make_one(n)
+dp(n)
 print(result[n])
