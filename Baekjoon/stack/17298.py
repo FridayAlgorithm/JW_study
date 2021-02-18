@@ -14,4 +14,4 @@ for i in range(num):
 
 print(" ".join(result))
 
-runtimeerror ㄷ ㄷ ㄷ 
+#runtimeerror ㄷ ㄷ ㄷ 
