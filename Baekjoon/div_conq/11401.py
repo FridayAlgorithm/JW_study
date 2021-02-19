@@ -25,5 +25,5 @@ for num in range(1, N-K+1):
     
 nk_part = solve(nk_part, p-2) % p
 
-result = (n_part * nk_part) % p
+result = (n_part * nk_part) % p  #???????????
 print(result)
