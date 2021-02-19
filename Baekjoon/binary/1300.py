@@ -16,3 +16,4 @@ while left <= right:
     ans = mid
     right = mid -1
 print(ans)
+#이분탐색적용아로리즘 이해불가로 클론코딩 
